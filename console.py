@@ -114,18 +114,6 @@ class HBNBCommand(cmd.Cmd):
         """ Overrides the emptyline method of CMD """
         pass
 
-    def __class_err(self, arg):
-        """private: checks for missing class or unknown class"""
-        error = 0
-        if len(arg) == 0:
-            print(HBNBCommand.ERR[0])
-            error = 1
-        else:
-            if arg[0] not in HBNBCommand.classes:
-                print(HBNBCommand.ERR[1])
-                error = 1
-        return error
-
     def _key_value_parser(self, args):
         """creates a dictionary from a list of strings"""
         new_dict = {}
