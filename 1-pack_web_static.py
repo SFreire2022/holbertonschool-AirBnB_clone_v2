@@ -18,7 +18,7 @@ def do_pack():
             mkdir('versions')
         timestamp = datetime.now().strftime("%Y%m%d%H%M%S")
         print('Packing web_static to versions/web_static_{}.tgz'.
-        	   format(timestamp))
+              format(timestamp))
         file_ = 'versions/web_static_{}'.format(timestamp)
         local('tar -czvf {}.tgz web_static'.format(file_))
         fname = '{}.tgz'.format(file_)
