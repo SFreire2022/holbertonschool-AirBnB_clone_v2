@@ -6,7 +6,8 @@ sudo apt-get -y install nginx
 sudo mkdir -p /data/web_static/shared/
 sudo mkdir -p /data/web_static/releases/test/
 sudo touch /data/web_static/releases/test/index.html
-echo "<html>
+echo "
+<html>
  <head>
    <title>
    Holberton School (title)
@@ -18,5 +19,5 @@ echo "<html>
  </html>" > sudo /data/web_static/releases/test/index.html
 sudo ln -sfn /data/web_static/current /data/web_static/releases/test/
 sudo chown -R ubuntu:ubuntu /data/
-sudo sed -i '/listen 80 default_server/a \tlocation /hbnb_static/ {\n\talias /data/web_static/current/;\n\tautoindex off;\n}' /etc/nginx/sites-available/default
+sudo sed -i '/listen 80 default_server/a location /hbnb_static/ {alias /data/web_static/current/;}' /etc/nginx/sites-available/default
 sudo service nginx restart
