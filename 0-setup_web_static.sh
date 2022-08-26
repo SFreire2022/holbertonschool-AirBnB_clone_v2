@@ -5,6 +5,7 @@ apt-get update
 apt-get -y install nginx
 mkdir -p /data/web_static/shared/
 mkdir -p /data/web_static/releases/test/
+touch /data/web_static/releases/test/index.html
 echo "<html>
  <head>
    <title>
