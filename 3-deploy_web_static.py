@@ -33,6 +33,7 @@ def do_deploy(archive_path):
     except Exception:
         return False
 
+
 def do_pack():
     """
     Packing project directory content into a versioned packages as .tgz
@@ -51,6 +52,7 @@ def do_pack():
         return fname
     except Exception:
         return None
+
 
 def deploy():
     """
