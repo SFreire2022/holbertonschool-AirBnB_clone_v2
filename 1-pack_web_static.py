@@ -20,7 +20,7 @@ def do_pack():
         print('Packing web_static to versions/web_static_{}.tgz'.
         	   format(timestamp))
         file_ = 'versions/web_static_{}'.format(timestamp)
-        local('sudo tar -czvf {}.tgz web_static'.format(file_))
+        local('tar -czvf {}.tgz web_static'.format(file_))
         fname = '{}.tgz'.format(file_)
         print('web_static packed: {} -> {}Bytes'.
               format(fname, getsize(fname)))
