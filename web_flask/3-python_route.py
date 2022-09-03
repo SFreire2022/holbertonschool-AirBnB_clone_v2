@@ -32,7 +32,7 @@ def c_is_fun(text):
     (replace underscore _ symbols with a space )
     """
     parsed_text = escape(text.replace('_', ' '))
-    return f'C {parsed_text}'
+    return 'C {}'.format(parsed_text)
 
 
 @app.route("/python/", defaults={'text': 'is cool'}, strict_slashes=False)
@@ -44,7 +44,7 @@ def python_is_cool(text):
     The default value of text is “is cool”
     """
     parsed_text = escape(text.replace('_', ' '))
-    return f'Python {parsed_text}'
+    return 'Python {}'.format(parsed_text)
 
 
 if __name__ == "__main__":
